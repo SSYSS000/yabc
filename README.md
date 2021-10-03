@@ -4,8 +4,8 @@ YABC (Yet Another Base Converter) is a simple command line base converter for Un
 ## Build and install instructions
 Run `make` or `cc -O3 -o yabc yabc.c` to build yabc.
 
-If you're using GNU make, install yabc with `make install PREFIX=/usr/local`
-to /usr/local/bin. To uninstall, run `make uninstall PREFIX=/usr/local`.
+Install yabc with `make install PREFIX=/usr/local`
+to /usr/local/bin. Uninstall with `make uninstall PREFIX=/usr/local`.
 
 ## How to use
 yabc requires the number that must be converted, the current base of the number and the base that the number will be converted into.
