@@ -1,12 +1,16 @@
-CFLAGS = -O3
+CFLAGS = -Wall -Wextra
 TARGET = yabc
 
-.PHONY: all
+release: CFLAGS += -DNDEBUG -O3
+release: exec
 
-all:
+debug: CFLAGS += -Og -g
+debug: exec
+
+exec:
 	$(CC) $(CFLAGS) -o $(TARGET) yabc.c
 
-install: all
+install: release
 	mkdir -p $(PREFIX)/bin
 	cp -f $(TARGET) $(PREFIX)/bin
 
